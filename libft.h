@@ -4,5 +4,6 @@
 extern int ft_isalpha(int c);
 extern int ft_isdigit(int c);
 extern int ft_isalnum(int c);
+extern int ft_isascii(int c);
 
 #endif
