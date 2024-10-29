@@ -6,11 +6,11 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:11:13 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/10/29 11:12:53 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/10/29 11:24:46 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }

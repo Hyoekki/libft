@@ -6,13 +6,15 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:17:29 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/10/29 11:23:04 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/10/29 11:26:16 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t ft_strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	const char *p;
+	const char	*p;
 
 	p = s;
 	while (*p)

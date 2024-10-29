@@ -6,11 +6,11 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:05:36 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/10/29 11:07:32 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/10/29 11:24:36 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

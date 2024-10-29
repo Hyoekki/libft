@@ -6,11 +6,11 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 10:25:14 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/10/29 10:33:32 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/10/29 11:24:41 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	return (c >= 48 && c <= 57);
 }

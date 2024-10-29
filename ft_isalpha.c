@@ -6,11 +6,11 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 09:45:38 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/10/29 10:33:39 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/10/29 11:24:29 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	return ((c < 91 && c > 64) || (c < 123 && c > 96));
 }
