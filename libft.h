@@ -12,5 +12,6 @@ extern size_t	ft_strlen(const char *s);
 extern void		*ft_memset(void *s, int c, size_t n);
 extern void		*bzero(void *s, size_t n);
 extern void		*ft_memcpy(void *src, void *dest, size_t n);
+extern void		*ft_memmove(void *dest, void *src, size_t n);
 
 #endif
