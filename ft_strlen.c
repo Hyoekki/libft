@@ -6,11 +6,9 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:17:29 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/10/29 11:26:16 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/10/30 08:13:22 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
