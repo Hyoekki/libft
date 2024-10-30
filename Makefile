@@ -8,7 +8,7 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wetra
 
 # TARGET = libft: This sets the name of the executable file that will be created.
-TARGET = libft
+TARGET = libft.a
 
 # SRC = $(wildcard *.c): This sets the source files to all files that end in .c
 SRC = $(wildcard *.c)
@@ -16,9 +16,9 @@ SRC = $(wildcard *.c)
 #OBJS = $(SRCS:.c=.o): This sets the object files to all files that end in .o
 OBJS = $(SRCS:.c=.o)
 
-# Rule to build the target executable
+# Rule to build the target library
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+	ar rcs $(TARGET) $(OBJS)
 
 # Rule to build object files
 %.o: %.c
