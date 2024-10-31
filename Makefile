@@ -1,36 +1,33 @@
 # Makefile for libft project
 
 # Variables
-# CC = gcc: This sets the compiler to gcc.
 CC = gcc
-
-# CFLAGS = -Wall -Werror -Wextra: This sets flags for the compiler.
 CFLAGS = -Wall -Werror -Wextra
-
-# TARGET = libft: This sets the name of the executable file that will be created.
-TARGET = libft.a
-
-# SRC = $(wildcard *.c): This sets the source files to all files that end in .c
+NAME = libft.a
 SRC = $(wildcard *.c)
-
-#OBJS = $(SRCS:.c=.o): This sets the object files to all files that end in .o
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRC:.c=.o)
 
 # Rule to build the target library
-$(TARGET): $(OBJS)
-	ar rcs $(TARGET) $(OBJS)
+$(NAME): $(OBJS)
+    ar rcs $(NAME) $(OBJS)
 
 # Rule to build object files
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+    $(CC) $(CFLAGS) -c $< -o $@
+
+# All rule to build the entire project
+all: $(NAME)
 
 # Clean rule to remove compiled files
 clean:
-	rm -f $(OBJS) $(TARGET)
+    rm -f $(OBJS)
+
+# Full clean rule to remove all generated files
+fclean: clean
+    rm -f $(NAME)
+
+# Rebuild rule to clean and then build
+re: fclean all
 
 # Phony targets
-.PHONY: clean
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
+.PHONY: all clean fclean re
