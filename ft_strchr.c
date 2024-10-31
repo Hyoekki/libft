@@ -6,7 +6,7 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 09:21:00 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/10/31 09:41:26 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/10/31 09:42:39 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if(*s == (char)c)
+		if (*s == (char)c)
 			return ((char *)s);
 		s++;
 	}
