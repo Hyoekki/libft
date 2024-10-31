@@ -6,20 +6,21 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 10:19:16 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/10/31 11:25:22 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/10/31 17:41:52 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-int	strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (n > 1)
+	if (n < 1)
 		return (0);
-	while (n-- && *s1 && (*s1 == *s2))
-	{
-		s1++;
-		s2++;
-	}
-	return (*s1 - *s2);
+    while (n && *s1 && (*s1 == *s2))
+    {
+        s1++;
+        s2++;
+        n--;
+    }
+    return (*s1 - *s2);
 }
