@@ -14,5 +14,6 @@ extern void		*bzero(void *s, size_t n);
 extern void		*ft_memcpy(void *src, void *dest, size_t n);
 extern void		*ft_memmove(void *dest, void *src, size_t n);
 extern size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+extern size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 #endif
