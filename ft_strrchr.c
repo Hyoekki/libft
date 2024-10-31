@@ -6,13 +6,15 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 09:45:42 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/10/31 10:19:57 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/10/31 11:25:09 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strrchr(const char *s, int c)
+#include <stddef.h>
+
+char	*ft_strrchr(const char *s, int c)
 {
-	char *last;
+	char	*last;
 
 	last = NULL;
 	while (*s)

@@ -6,10 +6,11 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 08:51:56 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/10/30 11:20:44 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/10/31 11:08:00 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/* #include <stddef.h>
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
@@ -20,4 +21,4 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	while (n--)
 		*d++ = *s++;
 	return (dest);
-}
+} */

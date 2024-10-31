@@ -6,11 +6,13 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 08:42:59 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/10/30 08:46:02 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/10/31 11:24:26 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	bzero(void *s, size_t n)
+#include <stddef.h>
+
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*p;
 

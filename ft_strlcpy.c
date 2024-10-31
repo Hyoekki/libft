@@ -6,9 +6,11 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 07:26:47 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/10/31 08:35:16 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/10/31 11:23:41 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

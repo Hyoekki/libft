@@ -5,7 +5,7 @@
 CC = gcc
 
 # CFLAGS = -Wall -Werror -Wextra: This sets flags for the compiler.
-CFLAGS = -Wall -Werror -Wetra
+CFLAGS = -Wall -Werror -Wextra
 
 # TARGET = libft: This sets the name of the executable file that will be created.
 TARGET = libft.a
@@ -30,3 +30,7 @@ clean:
 
 # Phony targets
 .PHONY: clean
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJ)

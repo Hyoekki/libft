@@ -6,9 +6,11 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 08:20:42 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/10/31 08:56:01 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/10/31 11:23:47 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

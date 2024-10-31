@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 11:28:20 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/10/31 11:23:26 by jhyokki          ###   ########.fr       */
+/*   Created: 2024/10/31 10:19:16 by jhyokki           #+#    #+#             */
+/*   Updated: 2024/10/31 11:25:22 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+int	strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
-
-	d = (unsigned char *)dest;
-	s = (const unsigned char *)src;
-	if (d == s)
-		return (dest);
-	if (d < s)
+	if (n > 1)
+		return (0);
+	while (n-- && *s1 && (*s1 == *s2))
 	{
-		while (n--)
-			*d++ = *s++;
+		s1++;
+		s2++;
 	}
-	else
-	{
-		d += n;
-		s += n;
-		while (n--)
-			*--d = *--s;
-	}
-	return (dest);
+	return (*s1 - *s2);
 }
