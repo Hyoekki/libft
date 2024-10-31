@@ -17,5 +17,6 @@ extern size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 extern size_t	ft_strlcat(char *dst, const char *src, size_t size);
 extern int		to_upper(int c);
 extern int		to_lower(int c);
+extern char		*ft_strchr(const char *s, int c);
 
 #endif
