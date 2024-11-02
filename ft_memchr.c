@@ -6,14 +6,14 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 05:41:57 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/02 05:49:28 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/02 05:53:15 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include<stddef.h>
 
-void	*memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char	*p;
 	unsigned char		*t;
