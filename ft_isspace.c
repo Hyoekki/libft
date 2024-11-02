@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 09:07:24 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/02 07:40:22 by jhyokki          ###   ########.fr       */
+/*   Created: 2024/11/02 07:22:31 by jhyokki           #+#    #+#             */
+/*   Updated: 2024/11/02 07:24:28 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+int	ft_isspace(int c)
 {
-	if((unsigned char)c >= 'a' && (unsigned char)c <= 'z')
-		return (c & ~32);
-	return c;
+	return (c == ' ' || c == '\t' || c == '\n' ||
+			c == '\v' || c == '\f' || c == '\r');
 }

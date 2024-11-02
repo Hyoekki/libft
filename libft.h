@@ -8,6 +8,7 @@ extern int		ft_isdigit(int c);
 extern int		ft_isalnum(int c);
 extern int		ft_isascii(int c);
 extern int		ft_isprint(int c);
+extern int		ft_isspace(int c);
 extern size_t	ft_strlen(const char *s);
 extern void		*ft_memset(void *s, int c, size_t n);
 extern void		ft_bzero(void *s, size_t n);
@@ -22,5 +23,6 @@ extern int		ft_tolower(int c);
 extern int		ft_toupper(int c);
 extern void		*ft_memchr(const void *s, int c, size_t n);
 extern char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
+extern int		ft_atoi(const char *str);
 
 #endif

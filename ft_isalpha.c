@@ -6,11 +6,11 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 09:45:38 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/10/31 17:31:18 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/02 07:34:25 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	  return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	  return (((unsigned char)c | 32) - 'a' < 26);
 }

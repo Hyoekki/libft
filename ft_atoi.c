@@ -1,18 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 09:07:24 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/02 07:40:22 by jhyokki          ###   ########.fr       */
+/*   Created: 2024/11/02 07:06:33 by jhyokki           #+#    #+#             */
+/*   Updated: 2024/11/02 07:34:21 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "libft.h" 
+
+int	ft_atoi(const char *str)
 {
-	if((unsigned char)c >= 'a' && (unsigned char)c <= 'z')
-		return (c & ~32);
-	return c;
+	int sign;
+	int result;
+
+	while (ft_isspace(*str))
+		str++;
+	sign = 1;
+	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			sign *= -1;
+		str++;
+	}
+	result = 0;
+	while (ft_isdigit(*str))
+	{
+		result = result * 10 + (*str - '0');
+		str++;
+	}
+	return (result * sign);
 }
