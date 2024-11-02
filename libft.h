@@ -24,5 +24,6 @@ extern int		ft_toupper(int c);
 extern void		*ft_memchr(const void *s, int c, size_t n);
 extern char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 extern int		ft_atoi(const char *str);
+extern void		*ft_calloc(size_t count, size_t size);
 
 #endif
