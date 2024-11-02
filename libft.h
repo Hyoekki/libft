@@ -21,5 +21,6 @@ extern int		ft_strncmp(const char *s1, const char *s2, size_t n);
 extern int		ft_tolower(int c);
 extern int		ft_toupper(int c);
 extern void		*ft_memchr(const void *s, int c, size_t n);
+extern char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 #endif
