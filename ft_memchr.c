@@ -6,7 +6,7 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 05:41:57 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/02 05:53:15 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/02 09:41:07 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char	*p;
-	unsigned char		*t;
+	unsigned char		t;
 
 	p = s;
-	t = c;
+	t = (unsigned char )c;
 	while (n--)
 	{
 		if (*p == t)

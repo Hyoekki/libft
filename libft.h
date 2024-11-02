@@ -12,7 +12,7 @@ extern int		ft_isspace(int c);
 extern size_t	ft_strlen(const char *s);
 extern void		*ft_memset(void *s, int c, size_t n);
 extern void		ft_bzero(void *s, size_t n);
-extern void		*ft_memcpy(void *src, void *dest, size_t n);
+extern void		*ft_memcpy(void *dest, const void *src, size_t n);
 extern void		*ft_memmove(void *dest, void *src, size_t n);
 extern size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 extern size_t	ft_strlcat(char *dst, const char *src, size_t size);
@@ -25,6 +25,6 @@ extern void		*ft_memchr(const void *s, int c, size_t n);
 extern char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 extern int		ft_atoi(const char *str);
 extern void		*ft_calloc(size_t count, size_t size);
-extern char		*ft_strdup(const char *s1)
+extern char		*ft_strdup(const char *s1);
 
 #endif
