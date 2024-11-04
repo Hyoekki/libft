@@ -1,7 +1,7 @@
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <stddef.h>
+# include <stddef.h>
 
 extern int		ft_isalpha(int c);
 extern int		ft_isdigit(int c);
