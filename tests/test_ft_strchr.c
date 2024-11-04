@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   test_ft_strchr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 08:20:42 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/04 07:35:15 by jhyokki          ###   ########.fr       */
+/*   Created: 2024/11/02 10:16:09 by jhyokki           #+#    #+#             */
+/*   Updated: 2024/11/02 10:38:20 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include "../libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
-{
-	char		*d;
-	const char	*s;
-	size_t		dst_len;
-	size_t		remaining_len;
-
-	d = dst;
-	s = src;
-	dst_len = ft_strlen(d);
-	if (!size)
-		return (dst_len + ft_strlen(src));
-	remaining_len = size - dst_len -1;
-	while (*d++)
-		;
-	while (*src && remaining_len)
-	{
-		*d++ = *s++;
-		remaining_len--;
-	}
-	*d = '\0';
-	return (dst_len + (s - src)); 
+void test_ft_strchr(const char *s, int c) {
+	char *result = ft_strchr(s, c);
+	char *expected = strchr(s, c);
+	if (result == expected)
+		printf("PASS: ft_strchr(\"%s\", '%c') == \"%s\"\n", s, c, result);
+	else
+		printf("FAIL: ft_strchr(\"%s\", '%c') == \"%s\", expected \"%s\"\n", s, c, result, expected);
 }

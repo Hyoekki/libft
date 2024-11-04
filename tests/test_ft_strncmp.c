@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   test_ft_strncmp.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 08:20:42 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/04 07:35:15 by jhyokki          ###   ########.fr       */
+/*   Created: 2024/11/02 10:22:32 by jhyokki           #+#    #+#             */
+/*   Updated: 2024/11/02 10:38:39 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include "../libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
-{
-	char		*d;
-	const char	*s;
-	size_t		dst_len;
-	size_t		remaining_len;
-
-	d = dst;
-	s = src;
-	dst_len = ft_strlen(d);
-	if (!size)
-		return (dst_len + ft_strlen(src));
-	remaining_len = size - dst_len -1;
-	while (*d++)
-		;
-	while (*src && remaining_len)
-	{
-		*d++ = *s++;
-		remaining_len--;
-	}
-	*d = '\0';
-	return (dst_len + (s - src)); 
+void test_ft_strncmp(const char *s1, const char *s2, size_t n) {
+	int result = ft_strncmp(s1, s2, n);
+	int expected = strncmp(s1, s2, n);
+	if (result == expected)
+		printf("PASS: ft_strncmp(\"%s\", \"%s\", %zu) == %d\n", s1, s2, n, result);
+	else
+		printf("FAIL: ft_strncmp(\"%s\", \"%s\", %zu) == %d, expected %d\n", s1, s2, n, result, expected);
 }

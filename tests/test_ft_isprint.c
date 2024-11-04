@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   test_ft_isprint.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 08:20:42 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/04 07:35:15 by jhyokki          ###   ########.fr       */
+/*   Created: 2024/11/02 10:11:10 by jhyokki           #+#    #+#             */
+/*   Updated: 2024/11/02 11:09:48 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include "../libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
-{
-	char		*d;
-	const char	*s;
-	size_t		dst_len;
-	size_t		remaining_len;
-
-	d = dst;
-	s = src;
-	dst_len = ft_strlen(d);
-	if (!size)
-		return (dst_len + ft_strlen(src));
-	remaining_len = size - dst_len -1;
-	while (*d++)
-		;
-	while (*src && remaining_len)
-	{
-		*d++ = *s++;
-		remaining_len--;
-	}
-	*d = '\0';
-	return (dst_len + (s - src)); 
+void test_ft_isprint(int c){
+	int result = ft_isprint(c);
+	int expected = isprint(c);
+	if (result == expected)
+		printf("PASS: ft_isprint('%c') == %d\n", c, result);
+	else
+		printf("FAILL: ft_isprint(%c) == %d, expected %d\n", c, result, expected);
 }
