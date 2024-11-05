@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/05 11:44:16 by jhyokki           #+#    #+#             */
+/*   Updated: 2024/11/05 12:02:05 by jhyokki          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
-# define ABS(x) ((x) < 0 ? -(x) : (x))
 
 # include <stddef.h>
 
@@ -13,6 +24,7 @@ extern int		ft_isspace(int c);
 extern size_t	ft_strlen(const char *s);
 extern void		*ft_memset(void *s, int c, size_t n);
 extern void		ft_bzero(void *s, size_t n);
+extern int		ft_memcmp(const void *s1, const void *s2, size_t n);
 extern void		*ft_memcpy(void *dest, const void *src, size_t n);
 extern void		*ft_memmove(void *dest, const void *src, size_t n);
 extern size_t	ft_strlcpy(char *dst, const char *src, size_t size);
@@ -36,7 +48,7 @@ extern char		*ft_itoa(int n);
 extern char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 extern void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 extern void		ft_putchar_fd(char c, int fd);
-extern void		ft_putstr_fd(const char *s, int fd);
+extern void		ft_putstr_fd(char *s, int fd);
 extern void		ft_putendl_fd(char *s, int fd);
 extern void		ft_putnbr_fd(int n, int fd);
 

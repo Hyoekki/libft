@@ -6,7 +6,7 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 07:15:18 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 09:17:53 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/05 11:42:37 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ static int	get_num_len(int n)
 		len = 1;
 	else
 		len = 0;
-	n = ABS(n);
+	if (n < 0)
+		n *= -1;
 	while (n)
 	{
 		n /= 10;
