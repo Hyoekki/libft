@@ -6,7 +6,7 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:57:35 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 09:23:48 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/05 09:35:10 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,30 @@ void test_ft_isalpha(int c);
 void test_ft_isascii(int c);
 void test_ft_isdigit(int c);
 void test_ft_isprint(int c);
+void test_ft_isspace(int c);
+void test_ft_itoa(int n);
+void test_ft_memchr(const void *s, int c, size_t n);
 void test_ft_memcpy(void *dest, const void *src, size_t n);
+void test_ft_memmove(void *dest, const void *src, size_t n);
 void test_ft_memset(void *s, int c, size_t n);
+void test_ft_putchar_fd(char c, int fd);
+void test_ft_putendl_fd(const char *s, int fd);
+void test_ft_putnbr_fd(int n, int fd);
+void test_ft_putstr_fd(const char *s, int fd);
+void test_ft_split(const char *s, char c);
 void test_ft_strchr(const char *s, int c);
+void test_ft_strdup(const char *s);
+void test_ft_striteri(char *s);
+void test_ft_strjoin(const char *s1, const char *s2);
 void test_ft_strlcat(char *dst, const char *src, size_t dstsize);
+void test_ft_strlcpy(char *dst, const char *src, size_t size);
 void test_ft_strlen(const char *s);
+void test_ft_strmapi(const char *s);
 void test_ft_strncmp(const char *s1, const char *s2, size_t n);
 void test_ft_strnstr(const char *haystack, const char *needle, size_t len);
+void test_ft_strrchr(const char *s, int c);
+void test_ft_strtrim(const char *s1, const char *set);
+void test_ft_substr(const char *s, unsigned int start, size_t len);
 
 int main() {
 	// Test ft_atoi
