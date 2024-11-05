@@ -6,13 +6,13 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 09:07:24 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/02 07:40:22 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/05 08:45:10 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
-	if((unsigned char)c >= 'a' && (unsigned char)c <= 'z')
+	if ((unsigned char)c >= 'a' && (unsigned char)c <= 'z')
 		return (c & ~32);
-	return c;
+	return (c);
 }

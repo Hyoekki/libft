@@ -6,11 +6,12 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 09:45:31 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/04 09:51:00 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/05 08:42:40 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)

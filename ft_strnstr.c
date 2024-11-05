@@ -6,7 +6,7 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 05:55:29 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/02 07:03:30 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/05 08:40:07 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	const char	*t;
 	size_t		i;
 
-	if(!*needle)
+	if (!*needle)
 		return ((char *)haystack);
-	while(*haystack && len)
+	while (*haystack && len)
 	{
 		s = haystack;
 		t = needle;

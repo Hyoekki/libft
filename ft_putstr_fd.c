@@ -6,7 +6,7 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 09:30:43 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/04 09:35:47 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/04 20:30:58 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	write(&fd, s, ft_strlen(&s));
+	write(fd, s, ft_strlen(s));
 }

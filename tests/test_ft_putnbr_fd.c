@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   test_ft_putnbr_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 09:11:42 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 08:49:15 by jhyokki          ###   ########.fr       */
+/*   Created: 2024/11/05 09:16:25 by jhyokki           #+#    #+#             */
+/*   Updated: 2024/11/05 09:16:48 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+#include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
-#include "libft.h"
+#include "../libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
-{
-	void	*p;
-
-	p = malloc(count * size);
-	if (p == NULL)
-		return (NULL);
-	ft_memset(p, 0, count * size);
-	return (p);
+void test_ft_putnbr_fd(int n, int fd) {
+	printf("ft_putnbr_fd(%d, %d) == ", n, fd);
+	ft_putnbr_fd(n, fd);
+	printf("\n");
 }

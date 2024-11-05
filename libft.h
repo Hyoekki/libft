@@ -1,5 +1,6 @@
 #ifndef LIBFT_H
 # define LIBFT_H
+# define ABS(x) ((x) < 0 ? -(x) : (x))
 
 # include <stddef.h>
 
@@ -22,7 +23,8 @@ extern int		ft_strncmp(const char *s1, const char *s2, size_t n);
 extern int		ft_tolower(int c);
 extern int		ft_toupper(int c);
 extern void		*ft_memchr(const void *s, int c, size_t n);
-extern char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
+extern char		*ft_strnstr(const char *haystack,
+					const char *needle, size_t len);
 extern int		ft_atoi(const char *str);
 extern void		*ft_calloc(size_t count, size_t size);
 extern char		*ft_strdup(const char *s1);
@@ -34,7 +36,7 @@ extern char		*ft_itoa(int n);
 extern char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 extern void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 extern void		ft_putchar_fd(char c, int fd);
-extern void		ft_putstr_fd(char *s, int fd);
+extern void		ft_putstr_fd(const char *s, int fd);
 extern void		ft_putendl_fd(char *s, int fd);
 extern void		ft_putnbr_fd(int n, int fd);
 

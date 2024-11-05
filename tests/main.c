@@ -6,7 +6,7 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:57:35 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/04 09:07:09 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/05 09:23:48 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void test_ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 int main() {
 	// Test ft_atoi
-	test_ft_atoi("123");
+	test_ft_atoi("1234567891234567890");
 	test_ft_atoi("-123");
 	test_ft_atoi("0");
 	test_ft_atoi("   42");
