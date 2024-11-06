@@ -6,10 +6,17 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 07:06:33 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 08:51:08 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/06 09:14:45 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+/*
+Takes character string and converts it to integer.
+Set variables for saving the sign, result to be returned and check
+for checking memory overflow. Skip white space and set sign.
+While the next char is digit append it to previous characters.
+ */
 #include "libft.h"
 
 int	ft_atoi(const char *str)
