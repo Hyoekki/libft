@@ -6,10 +6,16 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 09:45:31 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 08:42:40 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/06 11:16:28 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Takes integer n and prints it into filedecriptor fd
+0 for stdin
+1 for stdout
+2 for stderr
+ */
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
