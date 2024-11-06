@@ -6,10 +6,9 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 07:06:33 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/06 09:14:45 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/06 09:44:27 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 /*
 Takes character string and converts it to integer.
