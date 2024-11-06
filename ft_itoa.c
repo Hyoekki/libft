@@ -6,10 +6,16 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 07:15:18 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 11:42:37 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/06 10:03:38 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Takes integer n and returns character string s. Calculate integer lenght and
+allocate corerct amount of memory for return string. Perform NULL check.
+Handle negative sign and start appending digits using modulo sign while len does
+not equal to zero.
+ */
 #include <stdlib.h>
 #include "libft.h"
 
