@@ -6,9 +6,13 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 10:25:14 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 08:41:52 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/06 09:51:14 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+Check wether integer c is digit (0-9) and return 1 (TRUE) or 0 (FALSE)
+ */
 
 int	ft_isdigit(int c)
 {

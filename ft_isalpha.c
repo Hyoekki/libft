@@ -6,12 +6,13 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 09:45:38 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/06 09:47:45 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/06 09:50:32 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-Check wether integer c is capital letter or lowercase
+Check wether integer c is capital letter or lowercase and return 1 (TRUE)
+or 0 (FALSE)
  */
 
 int	ft_isalpha(int c)
