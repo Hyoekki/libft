@@ -6,9 +6,13 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 09:45:38 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 08:46:40 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/06 09:47:45 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+Check wether integer c is capital letter or lowercase
+ */
 
 int	ft_isalpha(int c)
 {
