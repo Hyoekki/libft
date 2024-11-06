@@ -6,10 +6,16 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 09:11:42 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 08:49:15 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/06 09:38:44 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+/*
+Allocate memory for the size bytes times count.
+Allocate memory for pointer p. Perform NULL check for memory allocation.
+Call memset function to set the allocated memory to 0 and return pointer p.
+ */
 #include <stdlib.h>
 #include "libft.h"
 
