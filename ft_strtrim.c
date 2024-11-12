@@ -6,10 +6,13 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 08:11:21 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 08:18:28 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/12 10:12:29 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Removes the characters of string *set from the string *s1 and returns new string
+ */
 #include <stdlib.h>
 #include "libft.h"
 

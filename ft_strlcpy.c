@@ -6,10 +6,14 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 07:26:47 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/10/31 11:23:41 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/12 10:01:53 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Copies up to size - 1 number of characters from NULL terminated string *src to
+*dst. Returns the lenght of src.
+ */
 #include <stddef.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)

@@ -6,10 +6,13 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 08:07:27 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 08:43:51 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/12 09:54:29 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Concatenates the strings *s1 and *s2. Returns the new string.
+ */
 #include <stdlib.h>
 #include "libft.h"
 

@@ -6,10 +6,14 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 08:07:13 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 08:33:22 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/12 10:21:35 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Applies the function f to characters of string *s and returns new string,
+keeping the original string unchanged.
+ */
 #include <stdlib.h>
 #include "libft.h"
 

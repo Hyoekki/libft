@@ -6,10 +6,15 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 08:00:01 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 08:45:36 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/12 09:46:46 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Split charcter string *s into muliple strings using char c as delimiter.
+Count number of pointers needed for new strings. Copy new words to assigned
+memory blocks calling word_dup function. Return 2D array of spitted words.
+ */
 #include <stdlib.h>
 #include "libft.h"
 

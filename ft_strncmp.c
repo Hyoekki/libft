@@ -6,10 +6,14 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 10:19:16 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 08:48:44 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/12 10:06:53 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Compares n number of characters from two strings of *s1 and *s2. Returns 0 for
+equal and negative or positive integer if *s1 is less or more than *s2.
+ */
 #include <stddef.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

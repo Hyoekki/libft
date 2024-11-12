@@ -6,10 +6,13 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 09:18:04 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 08:50:25 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/12 09:51:18 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Returns a pointer to new string that is copy of string *s1.
+ */
 #include <stdlib.h>
 #include "libft.h"
 

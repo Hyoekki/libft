@@ -6,10 +6,14 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 08:20:42 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 08:31:49 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/12 10:01:49 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Concatenates the number size of characters from string *src to *dest and NULL
+terminates the string. Returns the lenght of dst + src.
+ */
 #include <stddef.h>
 #include "libft.h"
 
