@@ -6,7 +6,7 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 07:06:33 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/06 09:44:27 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/12 10:49:24 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ int	ft_atoi(const char *str)
 	while (ft_isdigit(*str))
 	{
 		check = result * 10 + (*str - '0');
-		if (check / 10 != result && sign < 0)
-			return (-1);
 		if (check / 10 != result && sign > 0)
+			return (-1);
+		if (check / 10 != result && sign < 0)
 			return (0);
 		result = check;
 		str++;
