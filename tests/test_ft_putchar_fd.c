@@ -6,18 +6,41 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:14:31 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 09:14:51 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/14 19:45:28 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include <unistd.h>
 #include "../libft.h"
 
-void test_ft_putchar_fd(char c, int fd) {
-	printf("ft_putchar_fd('%c', %d) == ", c, fd);
-	ft_putchar_fd(c, fd);
-	printf("\n");
+void test_ft_putchar_fd(char c) {
+    int pipefd[2];
+    if (pipe(pipefd) == -1) {
+        perror("pipe");
+        return;
+    }
+
+    // Redirect stdout to the write end of the pipe
+    int saved_stdout = dup(STDOUT_FILENO);
+    dup2(pipefd[1], STDOUT_FILENO);
+    close(pipefd[1]);
+
+    // Call the function
+    ft_putchar_fd(c, STDOUT_FILENO);
+
+    // Restore original stdout
+    dup2(saved_stdout, STDOUT_FILENO);
+    close(saved_stdout);
+
+    // Read the output from the read end of the pipe
+    char buffer[2] = {0};
+    read(pipefd[0], buffer, 1);
+    close(pipefd[0]);
+
+    // Compare the result
+    if (buffer[0] == c)
+        printf("PASS: ft_putchar_fd('%c')\n", c);
+    else
+        printf("FAIL: ft_putchar_fd('%c') == '%c', expected '%c'\n", c, buffer[0], c);
 }

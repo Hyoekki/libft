@@ -5,19 +5,43 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 09:15:03 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 09:15:19 by jhyokki          ###   ########.fr       */
+/*   Created: 2024/11/05 09:15:31 by jhyokki           #+#    #+#             */
+/*   Updated: 2024/11/14 19:46:59 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include <stdio.h>
+#include <unistd.h>
 #include <string.h>
-#include <stdlib.h>
 #include "../libft.h"
 
-void test_ft_putstr_fd(const char *s, int fd) {
-	printf("ft_putstr_fd(\"%s\", %d) == ", s, fd);
-	ft_putstr_fd(s, fd);
-	printf("\n");
+void test_ft_putstr_fd(char *s) {
+    int pipefd[2];
+    if (pipe(pipefd) == -1) {
+        perror("pipe");
+        return;
+    }
+
+    // Redirect stdout to the write end of the pipe
+    int saved_stdout = dup(STDOUT_FILENO);
+    dup2(pipefd[1], STDOUT_FILENO);
+    close(pipefd[1]);
+
+    // Call the function
+    ft_putstr_fd(s, STDOUT_FILENO);
+
+    // Restore original stdout
+    dup2(saved_stdout, STDOUT_FILENO);
+    close(saved_stdout);
+
+    // Read the output from the read end of the pipe
+    char buffer[1024] = {0};
+    read(pipefd[0], buffer, sizeof(buffer) - 1);
+    close(pipefd[0]);
+
+    // Compare the result
+    if (strcmp(buffer, s) == 0)
+        printf("PASS: ft_putstr_fd(\"%s\")\n", s);
+    else
+        printf("FAIL: ft_putstr_fd(\"%s\") == \"%s\", expected \"%s\"\n", s, buffer, s);
 }

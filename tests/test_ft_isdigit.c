@@ -6,7 +6,7 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 10:10:44 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/02 11:09:43 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/14 18:26:15 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,4 @@ void test_ft_isdigit(int c){
 	else
 		printf("FAIL: ft_isdigit(%d) == %d, expected %d\n", c, result, expected);
 }
+

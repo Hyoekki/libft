@@ -6,7 +6,7 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:11:30 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 09:11:42 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/14 19:14:17 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,4 @@ void test_ft_strjoin(const char *s1, const char *s2) {
 	free(result);
 	free(expected);
 }
+
