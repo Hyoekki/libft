@@ -43,7 +43,8 @@ OBJS = $(SRC:.c=.o)
 # Detect OS and adjust compiler
 UNAME := $(shell uname)
 
-ifeq ($(UNAME), Darwin)  # macOS
+# macOS
+ifeq ($(UNAME), Darwin)
     CC = clang
 endif
 
