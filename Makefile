@@ -40,6 +40,13 @@ SRC = ft_atoi.c \
 	ft_toupper.c
 OBJS = $(SRC:.c=.o)
 
+# Detect OS and adjust compiler
+UNAME := $(shell uname)
+
+ifeq ($(UNAME), Darwin)  # macOS
+    CC = clang
+endif
+
 # Rule to build the target library
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
