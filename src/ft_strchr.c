@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/29 10:57:12 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/06 09:43:03 by jhyokki          ###   ########.fr       */
+/*   Created: 2024/10/31 09:21:00 by jhyokki           #+#    #+#             */
+/*   Updated: 2024/11/27 14:55:51 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+
 /*
-Call isalpha and isdigit functions to check wether integer c is alphabet or
-digit and return 1 (TRUE) or 0 (FALSE)
+Return a pointer to first occurence of char c in string *s.
  */
-
-#include "libft.h"
-
-int	ft_isalnum(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	while (*s)
+	{
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
+	}
+	if (c == '\0')
+		return ((char *)s);
+	return (NULL);
 }

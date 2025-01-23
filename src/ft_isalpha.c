@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 08:51:56 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/06 10:31:48 by jhyokki          ###   ########.fr       */
+/*   Created: 2024/10/29 09:45:38 by jhyokki           #+#    #+#             */
+/*   Updated: 2024/11/27 14:53:15 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-Copy the n number of bytes of memory from pointer src to pointer dest.
+Check wether integer c is capital letter or lowercase and return 1 (TRUE)
+or 0 (FALSE)
  */
-#include <stddef.h>
-
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_isalpha(int c)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
-
-	d = (unsigned char *) dest;
-	s = (const unsigned char *) src;
-	while (n--)
-		*d++ = *s++;
-	return (dest);
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }

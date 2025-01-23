@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 08:07:13 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/12 10:21:35 by jhyokki          ###   ########.fr       */
+/*   Created: 2024/11/05 08:07:27 by jhyokki           #+#    #+#             */
+/*   Updated: 2025/01/23 13:58:49 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Applies the function f to characters of string *s and returns new string,
-keeping the original string unchanged.
- */
 #include <stdlib.h>
-#include "libft.h"
-
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+#include "../include/libft.h"
+/*
+Concatenates the strings *s1 and *s2. Returns the new string.
+ */
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char			*result;
-	unsigned int	i;
+	char	*result;
+	size_t	len1;
+	size_t	len2;
 
-	if (!s || !f)
+	if (!s1 || !s2)
 		return (NULL);
-	result = malloc(sizeof(*result) * (ft_strlen(s) + 1));
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	result = malloc(sizeof(*result) * (len1 + len2 + 1));
 	if (!result)
 		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		result[i] = f(i, s[i]);
-		i++;
-	}
-	result[i] = '\0';
+	ft_memmove(result, s1, len1);
+	ft_memmove(result + len1, s2, len2);
+	result[len1 + len2] = '\0';
 	return (result);
 }

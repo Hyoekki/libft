@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 09:45:42 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/12 10:11:02 by jhyokki          ###   ########.fr       */
+/*   Created: 2024/11/02 09:18:04 by jhyokki           #+#    #+#             */
+/*   Updated: 2025/01/23 13:59:21 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+#include "../include/libft.h"
+
 /*
-Returns the pointer to first occurence of character c in string *s.
+Returns a pointer to new string that is copy of string *s1.
  */
-#include <stddef.h>
-
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strdup(const char *s1)
 {
-	char	*last;
+	size_t	size;
+	char	*copy;
 
-	last = NULL;
-	while (*s)
-	{
-		if (*s == (char)c)
-			last = ((char *)s);
-		s++;
-	}
-	if (c == '\0')
-		return ((char *)s);
-	return (last);
+	size = ft_strlen(s1) + 1;
+	copy = malloc(sizeof(*copy) * size);
+	if (copy == NULL)
+		return (NULL);
+	ft_memmove(copy, s1, size);
+	return (copy);
 }

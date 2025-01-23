@@ -6,17 +6,16 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 08:20:42 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/12 10:01:49 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/27 14:57:01 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+#include "../include/libft.h"
 /*
 Concatenates the number size of characters from string *src to *dest and NULL
 terminates the string. Returns the lenght of dst + src.
  */
-#include <stddef.h>
-#include "libft.h"
-
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	char		*d;

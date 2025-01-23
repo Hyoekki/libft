@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 09:11:42 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/06 09:45:18 by jhyokki          ###   ########.fr       */
+/*   Created: 2024/11/05 08:07:13 by jhyokki           #+#    #+#             */
+/*   Updated: 2024/11/27 14:57:38 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Allocate memory for the size bytes times count.
-Allocate memory for pointer p. Perform NULL check for memory allocation.
-Call memset function to set the allocated memory to 0 and return pointer p.
- */
 #include <stdlib.h>
-#include "libft.h"
+#include "../include/libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+/*
+Applies the function f to characters of string *s and returns new string,
+keeping the original string unchanged.
+ */
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	void	*p;
+	char			*result;
+	unsigned int	i;
 
-	p = malloc(count * size);
-	if (p == NULL)
+	if (!s || !f)
 		return (NULL);
-	ft_memset(p, 0, count * size);
-	return (p);
+	result = malloc(sizeof(*result) * (ft_strlen(s) + 1));
+	if (!result)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		result[i] = f(i, s[i]);
+		i++;
+	}
+	result[i] = '\0';
+	return (result);
 }

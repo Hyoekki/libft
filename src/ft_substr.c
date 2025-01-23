@@ -6,17 +6,17 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 09:09:32 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/12 10:14:42 by jhyokki          ###   ########.fr       */
+/*   Updated: 2024/11/27 14:58:43 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
+#include "../include/libft.h"
 
 /*
 Creates substring of lenght len starting from index start of string *s. Returns
 new string.
  */
-#include <stdlib.h>
-#include "libft.h"
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;

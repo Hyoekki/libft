@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 09:21:00 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/12 09:48:09 by jhyokki          ###   ########.fr       */
+/*   Created: 2024/11/04 09:33:45 by jhyokki           #+#    #+#             */
+/*   Updated: 2024/11/27 14:55:00 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Return a pointer to first occurence of char c in string *s.
- */
-#include <stddef.h>
+#include <unistd.h>
+#include "../include/libft.h"
 
-char	*ft_strchr(const char *s, int c)
+/*
+Takes character string s and writes it into filedescriptor fd
+followed by newline.
+0 for stdin
+1 for stdout
+2 for stderr
+ */
+void	ft_putendl_fd(char *s, int fd)
 {
-	while (*s)
-	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
-	}
-	if (c == '\0')
-		return ((char *)s);
-	return (NULL);
+	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
 }

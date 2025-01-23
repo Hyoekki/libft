@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 09:30:43 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/06 11:15:42 by jhyokki          ###   ########.fr       */
+/*   Created: 2024/10/30 08:42:59 by jhyokki           #+#    #+#             */
+/*   Updated: 2024/11/27 14:52:41 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Takes character string s and prints it into filesdescriptor fd
-0 for stdin
-1 for stdout
-2 for stderr
- */
-#include <unistd.h>
-#include "libft.h"
+#include <stddef.h>
 
-void	ft_putstr_fd(char *s, int fd)
+/*
+Erase n bytes of the memory starting from pointer s.
+Set pointer p equal to s. While n is not equal to zero, erase the memory at p
+and decrement n.
+ */
+void	ft_bzero(void *s, size_t n)
 {
-	write(fd, s, ft_strlen(s));
+	unsigned char	*p;
+
+	p = (unsigned char *)s;
+	while (n--)
+		*p++ = 0;
 }

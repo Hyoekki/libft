@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 10:19:16 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/12 10:06:53 by jhyokki          ###   ########.fr       */
+/*   Created: 2024/11/04 09:27:59 by jhyokki           #+#    #+#             */
+/*   Updated: 2024/11/27 14:54:43 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Compares n number of characters from two strings of *s1 and *s2. Returns 0 for
-equal and negative or positive integer if *s1 is less or more than *s2.
- */
-#include <stddef.h>
+#include <unistd.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+/*
+Takes character c and writes it into filedescriptor fd
+0 for stdin
+1 for stdout
+2 for stderr
+ */
+void	ft_putchar_fd(char c, int fd)
 {
-	if (n == 0)
-		return (0);
-	while (n > 1 && *s1 && (*s1 == *s2))
-	{
-		s1++;
-		s2++;
-		n--;
-	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	write(fd, &c, 1);
 }

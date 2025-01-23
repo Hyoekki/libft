@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 09:27:59 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/06 10:47:49 by jhyokki          ###   ########.fr       */
+/*   Created: 2024/10/31 09:45:42 by jhyokki           #+#    #+#             */
+/*   Updated: 2024/11/27 14:58:08 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Takes character c and writes it into filedescriptor fd
-0 for stdin
-1 for stdout
-2 for stderr
- */
-#include <unistd.h>
+#include <stddef.h>
 
-void	ft_putchar_fd(char c, int fd)
+/*
+Returns the pointer to first occurence of character c in string *s.
+ */
+char	*ft_strrchr(const char *s, int c)
 {
-	write(fd, &c, 1);
+	char	*last;
+
+	last = NULL;
+	while (*s)
+	{
+		if (*s == (char)c)
+			last = ((char *)s);
+		s++;
+	}
+	if (c == '\0')
+		return ((char *)s);
+	return (last);
 }
