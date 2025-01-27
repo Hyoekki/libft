@@ -6,7 +6,7 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 08:00:01 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/27 14:55:44 by jhyokki          ###   ########.fr       */
+/*   Updated: 2025/01/23 14:29:05 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,21 @@ static size_t	count_words(char const *s, char c)
 {
 	size_t	count;
 	int		in_word;
+	int		in_quotes;
 
 	count = 0;
 	in_word = 0;
+	in_quotes = 0;
 	while (*s)
 	{
+		if (*s == '"')
+			in_quotes = !in_quotes;
 		if (*s != c && !in_word)
 		{
 			in_word = 1;
 			count++;
 		}
-		else if (*s == c)
+		else if (*s == c && !in_quotes)
 			in_word = 0;
 		s++;
 	}
@@ -46,8 +50,31 @@ static char	*word_dup(const char *start, size_t len)
 	word = malloc(sizeof(*word) * (len + 1));
 	if (!word)
 		return (NULL);
-	ft_memcpy(word, start, len);
+	ft_memmove(word, start, len);
 	word[len] = '\0';
+	return (word);
+}
+
+static char	*get_next_word(const char **s, char c)
+{
+	const char	*start;
+	char		*word;
+	int			in_quotes;
+	size_t		len;
+
+	while (**s == c)
+		(*s)++;
+	start = *s;
+	in_quotes = 0;
+	len = 0;
+	while (**s && (**s != c || in_quotes))
+	{
+		if (**s == '"')
+			in_quotes = !in_quotes;
+		(*s)++;
+		len++;
+	}
+	word = word_dup(start, len);
 	return (word);
 }
 
@@ -55,7 +82,7 @@ char	**ft_split(char const *s, char c)
 {
 	char		**result;
 	size_t		words;
-	const char	*word_start;
+	size_t		i;
 
 	if (!s)
 		return (NULL);
@@ -63,19 +90,19 @@ char	**ft_split(char const *s, char c)
 	result = malloc(sizeof(*result) * (words + 1));
 	if (!result)
 		return (NULL);
-	words = 0;
-	while (*s)
+	i = 0;
+	while (i < words)
 	{
-		while (*s == c)
-			s++;
-		if (*s)
+		result[i] = get_next_word(&s, c);
+		if (!result[i])
 		{
-			word_start = s;
-			while (*s && *s != c)
-				s++;
-			result[words++] = word_dup(word_start, s - word_start);
+			while (i > 0)
+				free(result[--i]);
+			free(result);
+			return (NULL);
 		}
+		i++;
 	}
-	result[words] = NULL;
+	result[i] = NULL;
 	return (result);
 }
