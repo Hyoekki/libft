@@ -2,7 +2,7 @@
 
 # Variables
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -O2
 NAME = libft.a
 SRC = src/ft_atoi.c \
 	src/ft_bzero.c \
@@ -37,7 +37,8 @@ SRC = src/ft_atoi.c \
 	src/ft_strrchr.c \
 	src/ft_strtrim.c \
 	src/ft_tolower.c \
-	src/ft_toupper.c
+	src/ft_toupper.c \
+	src/free_array_of_strings.c
 OBJS = $(SRC:.c=.o)
 
 # Detect OS and adjust compiler
@@ -45,7 +46,7 @@ UNAME := $(shell uname)
 
 # macOS
 ifeq ($(UNAME), Darwin)
-    CC = clang
+	CC = clang
 endif
 
 # Rule to build the target library

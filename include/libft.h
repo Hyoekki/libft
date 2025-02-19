@@ -6,7 +6,7 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:44:16 by jhyokki           #+#    #+#             */
-/*   Updated: 2024/11/05 12:02:05 by jhyokki          ###   ########.fr       */
+/*   Updated: 2025/02/18 13:50:33 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stddef.h>
 
+extern void		free_array_of_strings(char **array);
 extern int		ft_isalpha(int c);
 extern int		ft_isdigit(int c);
 extern int		ft_isalnum(int c);
