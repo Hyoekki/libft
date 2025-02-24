@@ -1,7 +1,7 @@
 # Makefile for libft project
 
 # Variables
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Werror -Wextra -O2
 NAME = libft.a
 SRC = src/ft_atoi.c \
@@ -40,14 +40,6 @@ SRC = src/ft_atoi.c \
 	src/ft_toupper.c \
 	src/free_array_of_strings.c
 OBJS = $(SRC:.c=.o)
-
-# Detect OS and adjust compiler
-UNAME := $(shell uname)
-
-# macOS
-ifeq ($(UNAME), Darwin)
-	CC = clang
-endif
 
 # Rule to build the target library
 $(NAME): $(OBJS)
