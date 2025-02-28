@@ -6,7 +6,7 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:44:16 by jhyokki           #+#    #+#             */
-/*   Updated: 2025/02/18 13:50:33 by jhyokki          ###   ########.fr       */
+/*   Updated: 2025/02/28 11:30:12 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,29 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdarg.h>
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 128
+# endif
+
+typedef struct s_specifier_map
+{
+	char	specifier;
+	int		(*handler)(va_list *args);
+}	t_specifier_map;
+
+extern int		handle_s(va_list *args);
+extern int		handle_d(va_list *args);
+extern int		handle_percent(va_list *args);
+extern int		handle_x(va_list *args);
+extern int		handle_capital_x(va_list *args);
+extern int		handle_u(va_list *args);
+extern int		handle_c(va_list *args);
+extern int		handle_p(va_list *args);
+extern int		ft_printf(const char *format, ...);
 extern void		free_array_of_strings(char **array);
 extern int		ft_isalpha(int c);
 extern int		ft_isdigit(int c);
@@ -52,5 +74,6 @@ extern void		ft_putchar_fd(char c, int fd);
 extern void		ft_putstr_fd(char *s, int fd);
 extern void		ft_putendl_fd(char *s, int fd);
 extern void		ft_putnbr_fd(int n, int fd);
+extern char		*get_next_line(int fd);
 
 #endif

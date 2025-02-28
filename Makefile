@@ -1,6 +1,3 @@
-# Makefile for libft project
-
-# Variables
 CC = cc
 CFLAGS = -Wall -Werror -Wextra -O2
 NAME = libft.a
@@ -19,6 +16,7 @@ SRC = src/ft_atoi.c \
 	src/ft_memcpy.c \
 	src/ft_memmove.c \
 	src/ft_memset.c \
+	src/ft_printf.c \
 	src/ft_putchar_fd.c \
 	src/ft_putendl_fd.c \
 	src/ft_putnbr_fd.c \
@@ -38,7 +36,17 @@ SRC = src/ft_atoi.c \
 	src/ft_strtrim.c \
 	src/ft_tolower.c \
 	src/ft_toupper.c \
-	src/free_array_of_strings.c
+	src/free_array_of_strings.c \
+	src/get_next_line.c \
+	src/handle_c.c \
+	src/handle_capital_hex.c \
+	src/handle_d.c \
+	src/handle_p.c \
+	src/handle_percent.c \
+	src/handle_s.c \
+	src/handle_u.c \
+	src/handle_x.c
+
 OBJS = $(SRC:.c=.o)
 
 # Rule to build the target library
@@ -47,10 +55,6 @@ $(NAME): $(OBJS)
 
 # Rule to build object files
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Rule to build test object files
-$(TEST_DIR)/%.o: $(TEST_DIR)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # All rule to build the entire project
