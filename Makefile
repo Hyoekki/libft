@@ -2,6 +2,7 @@ CC = cc
 CFLAGS = -Wall -Werror -Wextra -O2
 NAME = libft.a
 SRC = src/ft_atoi.c \
+	src/ft_atol.c \
 	src/ft_bzero.c \
 	src/ft_calloc.c \
 	src/ft_isalnum.c \

@@ -6,7 +6,7 @@
 /*   By: jhyokki <jhyokki@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:44:16 by jhyokki           #+#    #+#             */
-/*   Updated: 2025/02/28 11:30:12 by jhyokki          ###   ########.fr       */
+/*   Updated: 2025/04/01 17:34:27 by jhyokki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ extern void		*ft_memchr(const void *s, int c, size_t n);
 extern char		*ft_strnstr(const char *haystack,
 					const char *needle, size_t len);
 extern int		ft_atoi(const char *str);
+long long		ft_atol(const char *str);
 extern void		*ft_calloc(size_t count, size_t size);
 extern char		*ft_strdup(const char *s1);
 extern char		*ft_substr(char const *s, unsigned int start, size_t len);
